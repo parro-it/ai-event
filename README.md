@@ -7,6 +7,9 @@
 
 background details relevant to understanding what this module does
 
+## Async iterable fun
+__This module is part of [Async iterable fun](https://github.com/parro-it/ai-fun), a complete toolset of modules to work with async iterables.__
+
 ## Usage
 
 description of the example
@@ -35,6 +38,8 @@ npm install --save $package_name
 ## See Also
 
 - [`noffle/common-readme`](https://github.com/noffle/common-readme)
+- [`parro-it/ai-fun`](https://github.com/parro-it/ai-fun)
+
 
 ## License
 

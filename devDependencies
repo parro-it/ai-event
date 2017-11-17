@@ -1,4 +1,5 @@
-ava
+tape-async
 @std/esm
 linterjs
 documentation
+tap-prettify
