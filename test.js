@@ -1,4 +1,4 @@
-import test from "ava";
+import test from "tape-js";
 import $package_var from ".";
 
 test("exports a function", t => {
