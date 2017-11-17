@@ -1,4 +1,4 @@
-import test from "tape-js";
+import test from "tape-async";
 import $package_var from ".";
 
 test("exports a function", t => {
