@@ -1,3 +1,3 @@
-const $package_var = require("$package_name");
+const aiEvent = require("ai-event");
 
-console.log({ $package_var });
+console.log({ aiEvent });

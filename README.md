@@ -1,9 +1,9 @@
-# $package_name
+# ai-event
 
-[![Travis Build Status](https://img.shields.io/travis/$package_author/$package_name/master.svg)](http://travis-ci.org/$package_author/$package_name)
-[![NPM downloads](https://img.shields.io/npm/dt/$package_name.svg)](https://npmjs.org/package/$package_name)
+[![Travis Build Status](https://img.shields.io/travis/parro-it/ai-event/master.svg)](http://travis-ci.org/parro-it/ai-event)
+[![NPM downloads](https://img.shields.io/npm/dt/ai-event.svg)](https://npmjs.org/package/ai-event)
 
-> $package_description
+> Create an async iterable from an event emitter.
 
 background details relevant to understanding what this module does
 
@@ -15,9 +15,9 @@ __This module is part of [Async iterable fun](https://github.com/parro-it/ai-fun
 description of the example
 
 ```js
-const $package_var = require('$package_name');
+const aiEvent = require('ai-event');
 
-console.log({$package_var});
+console.log({aiEvent});
 ```
 
 This will output
@@ -32,7 +32,7 @@ This will output
 With [npm](https://npmjs.org/) installed, run
 
 ```bash
-npm install --save $package_name
+npm install --save ai-event
 ```
 
 ## See Also
