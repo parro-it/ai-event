@@ -5,25 +5,30 @@
 
 > Create an async iterable from an event emitter.
 
-background details relevant to understanding what this module does
+This module transform an event emitter into an async iterable.
 
 ## Async iterable fun
-__This module is part of [Async iterable fun](https://github.com/parro-it/ai-fun), a complete toolset of modules to work with async iterables.__
+
+**This module is part of
+[Async iterable fun](https://github.com/parro-it/ai-fun), a complete toolset of
+modules to work with async iterables.**
 
 ## Usage
 
-description of the example
+Transform a node stream into an aync iterable:
 
 ```js
-const aiEvent = require('ai-event');
+const fromEvent = require("ai-event");
+import { createReadStream } from "fs";
 
-console.log({aiEvent});
+const stream = createReadStream("aFile", "utf8");
+const iterable = fromEvent(stream, "data");
+for await (const chunk of iterable) {
+  console.log(chunk);
+}
 ```
 
-This will output
-
-```
-```
+This will output aFile content
 
 ## API
 
@@ -37,11 +42,9 @@ npm install --save ai-event
 
 ## See Also
 
-- [`noffle/common-readme`](https://github.com/noffle/common-readme)
-- [`parro-it/ai-fun`](https://github.com/parro-it/ai-fun)
-
+* [`noffle/common-readme`](https://github.com/noffle/common-readme)
+* [`parro-it/ai-fun`](https://github.com/parro-it/ai-fun)
 
 ## License
 
 MIT
-

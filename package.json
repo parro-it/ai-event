@@ -10,7 +10,7 @@
     "example.js"
   ],
   "scripts": {
-    "test": "node --harmony_async_iteration -r @std/esm test.js | tap-prettify - && linterjs .",
+    "test": "node --harmony_async_iteration -r @std/esm test.js | tap-colorize - && linterjs .",
     "doc": "documentation readme index.js --section=API"
   },
   "engines": {
@@ -28,5 +28,8 @@
     "linterjs": "^1.11.0",
     "tap-colorize": "^1.2.0",
     "tape-async": "^2.3.0"
+  },
+  "dependencies": {
+    "asynciterable": "^1.0.1"
   }
 }
