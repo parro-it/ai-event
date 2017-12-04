@@ -11,8 +11,8 @@ test("transform a stream into an async iterable", async t => {
 
 test("throw if arg is not a readable stream", async t => {
   t.throws(
-    () => fromStream(),
+    () => aiEvent(),
     TypeError,
-    `Expected a readable stream argument, got ${undefined}`
+    `Expected an event emitter argument, got ${undefined}`
   );
 });

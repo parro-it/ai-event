@@ -7,6 +7,14 @@ import AsyncIterable from "asynciterable";
  * @return {[type]}         converted iterator
  */
 export default function aiFromEvent(emitter, opts) {
+  if (
+    typeof emitter !== "object" ||
+    emitter === null ||
+    (typeof emitter.on !== "function" &&
+      typeof emitter.addEventListener !== "function")
+  ) {
+    throw new TypeError(`Expected an event emitter argument, got ${emitter}`);
+  }
   const {
     end = "end",
     error = "error",
