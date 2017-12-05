@@ -4,7 +4,7 @@ import AsyncIterable from "asynciterable";
  * Create from an event emitter an async iterable that emits
  * each event received.
  * @param  {EventEmitter} emitter the emitter to listen for events
- * @param  {String | Object} event   the name of event to bind to write
+ * @param  {String} event   the name of event to bind to write
  * @return {AsyncIterable}         converted iterator
  */
 export default function aiFromEvent(emitter, opts) {

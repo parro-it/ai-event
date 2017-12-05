@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "test": "electron -r @std/esm test.js | tap-colorize - && linterjs .",
-    "doc": "documentation readme index.js --section API"
+    "doc": "documentation readme --section API"
   },
   "engines": {
     "node": ">=7"

@@ -42,8 +42,7 @@ each event received.
 **Parameters**
 
 -   `emitter` **EventEmitter** the emitter to listen for events
--   `opts`  
--   `event` **([String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object))** the name of event to bind to write
+-   `event` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the name of event to bind to write
 
 Returns **AsyncIterable** converted iterator
 
