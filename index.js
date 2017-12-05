@@ -1,10 +1,11 @@
 import AsyncIterable from "asynciterable";
 
 /**
- * Create an async iterable from a stream
+ * Create from an event emitter an async iterable that emits
+ * each event received.
  * @param  {EventEmitter} emitter the emitter to listen for events
  * @param  {String | Object} event   the name of event to bind to write
- * @return {[type]}         converted iterator
+ * @return {AsyncIterable}         converted iterator
  */
 export default function aiFromEvent(emitter, opts) {
   if (
