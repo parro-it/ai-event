@@ -6,8 +6,7 @@
   "author": "Andrea Parodi <andrea@parro.it>",
   "license": "MIT",
   "files": [
-    "index.js",
-    "example.js"
+    "index.js"
   ],
   "scripts": {
     "test": "electron -r @std/esm test.js | tap-colorize - && linterjs .",
@@ -17,7 +16,6 @@
     "node": ">=7"
   },
   "keywords": [],
-  "tonicExampleFilename": "example.js",
   "@std/esm": {
     "esm": "js",
     "cjs": true
