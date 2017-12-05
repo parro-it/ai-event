@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <h1>ciao</h1>
+    <script >
+        const _require = require("@std/esm")(module, {
+          esm: "js",
+          cjs: true
+        });
+        const aiEvent = _require("..").default;
+        window.results = [];
+        (async () => {
+          const iterable = aiEvent(document.body, "click");
+          const iterator = iterable[Symbol.asyncIterator](iterable);
+          let item = {};
+          while (!item.done) {
+            item = await iterator.next();
+            if (!item.done) {
+              const {x,y} = item.value;
+              window.results.push({x,y});
+            }
+          }
+
+
+
+        })().catch(err => {
+          console.error(err)
+        })
+        setTimeout(() => {
+          document.body.click();
+          document.body.click();
+          document.body.click();
+          document.body.click();
+        })
+
+
+    </script>
+  </body>
+</html>
+

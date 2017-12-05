@@ -21,9 +21,16 @@ export default function aiFromEvent(emitter, opts) {
     event = typeof opts === "string" ? opts : ""
   } = opts;
 
+  let on;
+  if (typeof emitter.on === "function") {
+    on = emitter.on;
+  } else {
+    on = emitter.addEventListener;
+  }
+
   return new AsyncIterable((writeFn, endFn, errorFn) => {
-    emitter.on(event, writeFn);
-    emitter.on(end, endFn);
-    emitter.on(error, errorFn);
+    on.call(emitter, event, writeFn);
+    on.call(emitter, end, endFn);
+    on.call(emitter, error, errorFn);
   });
 }
